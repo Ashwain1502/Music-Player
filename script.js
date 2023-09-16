@@ -10,6 +10,8 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
+const shuffleBtn = document.getElementById('shuffle');
+let isShuffled = false;
 
 // Song titles
 const songs = ['Madcon - Beggin','Love-Nwantiti','Love-Nwantinti_slowed','One Dance','Hot girl bummer(slowed & reverb)','Lil_Nas_X_Industry_Baby'];
@@ -87,7 +89,22 @@ function setProgress(e) {
   audio.currentTime = (clickX / width) * duration;
 }
 
+//shuffle songs 
+function shuffleSongs() {
+  isShuffled = !isShuffled;
+  if (isShuffled) {
+    for (let i = songs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [songs[i], songs[j]] = [songs[j], songs[i]];
+    }
+    songIndex = songs.indexOf(title.innerText);
+  } else {
+    songIndex = 5;
+  }
 
+  loadSong(songs[songIndex]);
+  playSong();
+}
 
 // Event listeners
 playBtn.addEventListener('click', () => {
@@ -113,3 +130,5 @@ progressContainer.addEventListener('click', setProgress);
 // Song ends
 audio.addEventListener('ended', nextSong);
 
+//shuffle songs
+shuffleBtn.addEventListener('click', shuffleSongs);
