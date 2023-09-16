@@ -161,3 +161,39 @@ span{
   padding: 1rem 1rem;
   background-color: rgba(200, 200, 200, 0.2);
 }
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px; 
+  }
+  .music-container {
+    margin: 50px 0; 
+  }
+  .img-container img {
+    height: 80px; 
+  }
+  .action-btn {
+    font-size: 16px; 
+  }
+  .music-info {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+  }
+  .music-container {
+    margin: 80px 0;
+  }
+  .img-container img {
+    height: 90px; 
+  }
+  .action-btn {
+    font-size: 18px; 
+  }
+  .music-info {
+    padding: 20px; 
+  }
+}
