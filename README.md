@@ -1,6 +1,11 @@
 # Music-Player
 A web application for playing music on a web browser in HTML, CSS, and JavaScript.
 
+#Functions
+1. Different songs on the queue
+2. Shuffle functionality
+3. Good and simple UI
+
 ## How to run the application
 1. Download the zip file
 2. Move to the folder
