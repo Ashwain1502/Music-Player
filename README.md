@@ -14,6 +14,5 @@ A web application for playing music on a web browser in HTML, CSS, and JavaScrip
 ## Working Link
 [Click Here](https://awesome-mini-music-player.netlify.app/).
 
-## Contributors
-
-Ashwani Kumar ( ashwink1502@gmail.com ).
+> ## Contributors
+> Ashwani Kumar ( ashwink1502@gmail.com ).
